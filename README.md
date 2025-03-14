@@ -1,5 +1,11 @@
 # RISC Pipeline simulation
 
+## Request
+
+As a C# developer, I want to create a Console application to analyze and display the 7 stage pipeline based on a list of provided commands. Here all the explanations.
+
+## Explanation
+
 In computer organization, a 7-stage instruction pipeline is often used to execute instructions in stages, allowing for parallel processing and improved performance. Here's what the stages typically mean:
 
 - *IF (Instruction Fetch)*: The processor retrieves the instruction from memory, usually from the instruction cache or main memory.

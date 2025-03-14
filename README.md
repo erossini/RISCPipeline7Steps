@@ -1,6 +1,16 @@
 # RISC Pipeline simulation
 
+In computer organization, a 7-stage instruction pipeline is often used to execute instructions in stages, allowing for parallel processing and improved performance. Here's what the stages typically mean:
 
+- *IF (Instruction Fetch)*: The processor retrieves the instruction from memory, usually from the instruction cache or main memory.
+- *ID (Instruction Decode)*: The fetched instruction is decoded to understand what operation needs to be performed. Operands and control signals are determined at this stage.
+- *IW (Instruction Window)*: The instruction enters a scheduling window or buffer where it awaits execution. This allows for better handling of out-of-order execution in modern processors.
+- *RR (Register Read)*: The values of the source operands are read from the processor's registers. These values are needed to execute the instruction.
+- *EX (Execution)*: The actual operation specified by the instruction is performed in this stage. For example, arithmetic or logic operations are carried out.
+- *RB (Result Buffer)*: The result produced by the execution stage is temporarily stored in a buffer, often waiting for the write-back stage or any additional checks.
+- *WB (Write Back)*: The result is written back to the register file or memory, making it available for future instructions.
+
+The exact stages and their meanings may vary depending on the processor architecture, but this is a general overview of how a 7-stage pipeline works.
 
 Consider the following assembly code:
 
@@ -45,7 +55,7 @@ but we have to be careful not to mess up the program semantics: I7 can go to WB 
 | 19    | I10         |        |        |    |    |    |                      |                  |
 | 20    | I10         |        |        |    |    |    |                      |                  |
 
-# Result with two functional units
+## Result with two functional units
 
 | Cycle |  IF   |  ID   |  IW   |  RR   |  EX   |  RB   |  WB   | Comments                  |
 |-------|-------|-------|-------|-------|-------|-------|-------|---------------------------|
